@@ -9,6 +9,11 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import ProcessExitPlugin from './components/vite-plugin-vue-process-exit'
 import { runtimeCaching } from './cache.mjs'
 import siteSearchPlugin from './search.mjs'
+import deploymentPlugin from './deployment.mjs'
+
+const base = process.env.SITE_BASE || '/'
+const siteOrigin = process.env.SITE_ORIGIN || 'https://quincyqaq.github.io'
+const publicPath = (path: string) => `${base}${path.replace(/^\//, '')}`
 
 const ogprefix = 'og: http://ogp.me/ns#'
 const title = '港科广手册'
@@ -17,7 +22,11 @@ const color = '#005a87'
 const author = 'hkust-gz.online'
 
 export default defineUserConfig({
+    base,
+    shouldPrefetch: false,
+    markdown: { assets: { absolutePathPrependBase: true } },
     bundler: viteBundler({
+        vuePluginOptions: { template: { transformAssetUrls: { includeAbsolute: false } } },
         viteOptions: {
             ssr: {
                 noExternal: [],
@@ -32,25 +41,26 @@ export default defineUserConfig({
         }
     },
     head: [
-        ['link', { rel: 'icon', href: `/logo-assets/touch/homescreen192.png` }],
+        ['link', { rel: 'icon', href: publicPath('/logo-assets/touch/homescreen192.png') }],
         ['meta', { name: 'theme-color', content: color }],
-        ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
+        ['link', { rel: 'manifest', href: publicPath('/manifest.webmanifest') }],
         ['meta', { prefix: ogprefix, property: 'og:type', content: 'article' }],
         ['meta', {
             prefix: ogprefix,
             property: 'og:image',
-            content: '/assets/og-image.png'
+            content: `${siteOrigin}${publicPath('/assets/og-image.png')}`
         }],
         ['meta', { prefix: ogprefix, property: 'og:article:author', content: author }],
         ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
         ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-        ['link', { rel: 'apple-touch-icon', href: '/logo-assets/touch/homescreen168.png' }],
-        ['meta', { name: 'msapplication-TileImage', content: '/logo-assets/touch/homescreen144.png' }],
+        ['link', { rel: 'apple-touch-icon', href: publicPath('/logo-assets/touch/homescreen168.png') }],
+        ['meta', { name: 'msapplication-TileImage', content: publicPath('/logo-assets/touch/homescreen144.png') }],
         ['meta', { name: 'msapplication-TileColor', content: color }],
-        ['script', { src: '/wx_helper.js' }],
+        ['script', { src: publicPath('/wx_helper.js') }],
         ['script', { src: 'https://res.wx.qq.com/open/js/jweixin-1.6.0.js' }],
     ],
     plugins: [
+        deploymentPlugin(base),
         siteSearchPlugin(),
         // [
         //   '@vuepress/plugin-search',
@@ -131,6 +141,7 @@ export default defineUserConfig({
         //     id: 'G-1BQBXDGY3R',
         // }),
         pwaPlugin({
+            manifest: { start_url: base, scope: base },
             maxSize: 512,
             generateSWConfig: {
                 runtimeCaching,
@@ -140,7 +151,7 @@ export default defineUserConfig({
             },
         }),
         sitemapPlugin({
-            hostname: "https://hkust-gz.online/",
+            hostname: `${siteOrigin}${base}`,
         }),
         tocPlugin(),
         ProcessExitPlugin(),

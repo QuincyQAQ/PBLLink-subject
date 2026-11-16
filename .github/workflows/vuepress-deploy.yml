@@ -1,74 +1,56 @@
-name: Build and Deploy
+name: Build and Deploy VuePress
+
 on:
   push:
+    branches: [main]
   pull_request:
+    branches: [main]
   workflow_dispatch:
 
-jobs:
+permissions:
+  contents: read
 
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
   build:
     runs-on: ubuntu-latest
-    name: Build site
     steps:
-    - name: Checkout
-      uses: actions/checkout@v7
-      with:
-        fetch-depth: 0
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+      - name: Build VuePress for GitHub Pages
+        run: pnpm docs:build
+        env:
+          SITE_BASE: /PBLLink-subject/
+          SITE_ORIGIN: https://quincyqaq.github.io
+          TZ: Asia/Shanghai
+      - name: Upload built website
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: docs/.vuepress/dist
 
-    - name: Set timezone
-      run: sudo timedatectl set-timezone Asia/Shanghai
-
-    - name: Check Time
-      run: date
-
-    - uses: actions/setup-node@v7
-      name: Install Node.js
-      with:
-        node-version-file: '.nvmrc'
-
-    - uses: pnpm/action-setup@v6
-      name: Install pnpm
-      with:
-        version: 10
-
-    - name: Install Dependencies
-      run: pnpm install
-
-    - name: Check pnpm / node version
-      run: |
-        echo "pnpm version `pnpm --version`"
-        echo "node version `node -v`"
-        pnpm list
-
-    - name: Build Site
-      run: |
-        pnpm docs:clean
-        pnpm docs:build
-
-    - name: Upload artifact
-      uses: actions/upload-artifact@v7
-      with:
-        name: 'hkust-gz-manual-build'
-        path: './docs/.vuepress/dist/'
-
-  deploy-on-main:
-    name: Deploy site (main)
-    runs-on: "ubuntu-latest"
+  deploy:
+    if: github.event_name != 'pull_request'
     needs: build
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-    - uses: actions/download-artifact@v8
-      with:
-        name: hkust-gz-manual-build
-        path: "./docs/.vuepress/dist/"
-
-    - name: Display structure of downloaded files
-      run: ls -R
-      working-directory: "./docs/.vuepress/dist/"
-
-    - name: Deploy to GitHub page
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/.vuepress/dist/
-        force_orphan: true
+      - name: Deploy built website to Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
