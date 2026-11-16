@@ -39,21 +39,29 @@ pageClass: manual-home
 
 ## 常用网站 <span class="manual-section-en">QUICK LINKS</span>
 
+<section class="manual-redbird" aria-labelledby="redbird-links-title">
+  <div class="manual-redbird-heading"><div><span class="manual-redbird-badge">RED BIRD MPHIL</span><h3 id="redbird-links-title">红鸟硕士常用</h3></div><p>把每天常用的入口，放在一起。</p></div>
+  <div class="manual-redbird-links">
+    <a href="https://sisn.hkust-gz.edu.cn/auth-sign" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">学业事务</span><strong>SIS <span aria-hidden="true">↗</span></strong><span>研究生信息系统</span></a>
+    <a href="https://elpa.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">语言评估</span><strong>ELPA <span aria-hidden="true">↗</span></strong><span>英语水平评估</span></a>
+    <a href="https://klms.hkust-gz.edu.cn/home" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">学习平台</span><strong>KLMS <span aria-hidden="true">↗</span></strong><span>进入学习平台</span></a>
+    <a href="https://gpt.hkust-gz.edu.cn/conversation-mode" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">AI 工具</span><strong>校内 GPT <span aria-hidden="true">↗</span></strong><span>校园 AI 对话入口</span></a>
+    <a href="https://docs.hpc.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">科研计算</span><strong>HPC <span aria-hidden="true">↗</span></strong><span>智算平台使用文档</span></a>
+    <a href="https://hkust-gz.instructure.com" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">学习平台</span><strong>Canvas <span aria-hidden="true">↗</span></strong><span>进入 Canvas 平台</span></a>
+    <a href="https://pdc.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">常用系统</span><strong>PDC <span aria-hidden="true">↗</span></strong><span>进入 PDC 平台</span></a>
+  </div>
+</section>
+
+### 其他校园网站
+
 <div class="manual-quick-links">
   <a href="https://www.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">学校官网 ↗</a>
   <a href="https://myportal.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">校内门户 Portal ↗</a>
   <a href="https://onestop-online.hkust-gz.edu.cn/fp/view?m=fp" target="_blank" rel="noopener noreferrer">办事大厅 ↗</a>
   <a href="https://library.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">图书馆官网 ↗</a>
   <a href="https://fytgs.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">研究生院 ↗</a>
-  <a href="https://sisn.hkust-gz.edu.cn/auth-sign" target="_blank" rel="noopener noreferrer">SIS 研究生系统 ↗</a>
-  <a href="https://elpa.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer">ELPA 英语评估 ↗</a>
   <a href="https://ug-prog-crs.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">课程目录 ↗</a>
-  <a href="https://klms.hkust-gz.edu.cn/home" target="_blank" rel="noopener noreferrer">KLMS ↗</a>
-  <a href="https://gpt.hkust-gz.edu.cn/conversation-mode" target="_blank" rel="noopener noreferrer">校内 GPT ↗</a>
   <a href="https://itdid.hkust-gz.edu.cn/cn/GeneralOfficeSoftware" target="_blank" rel="noopener noreferrer">软件下载 ↗</a>
-  <a href="https://docs.hpc.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">HPC 智算平台 ↗</a>
-  <a href="https://hkust-gz.instructure.com" target="_blank" rel="noopener noreferrer">Canvas ↗</a>
-  <a href="https://pdc.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer">PDC ↗</a>
   <a href="https://rbm-computing.hkust-gz.edu.cn" target="_blank" rel="noopener noreferrer">RBM Computing ↗</a>
 </div>
 
