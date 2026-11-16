@@ -14,6 +14,8 @@ pageClass: manual-home
   </div>
 </div>
 
+<div class="manual-home-tools">
+
 <a class="manual-email-page" href="/contact/emails/">
   <span class="manual-email-icon" aria-hidden="true">✉</span>
   <span class="manual-email-copy"><strong>邮箱汇总 <small>EMAIL DIRECTORY</small></strong><span>83 个公开邮箱 · 招生、教务、住宿、IT、枢纽与学域</span></span>
@@ -22,25 +24,10 @@ pageClass: manual-home
 
 <SiteSearch />
 
-## 校园指南 <span class="manual-section-en">CAMPUS ESSENTIALS</span>
-
-<div class="manual-card-grid">
-  <a class="manual-card" href="/study/"><span class="manual-card-number">01 / STUDY</span><strong>学习与教务 <span aria-hidden="true">↗</span></strong><span>选课、教务与学术事务</span></a>
-  <a class="manual-card" href="/life/"><span class="manual-card-number">02 / LIFE</span><strong>校园生活 <span aria-hidden="true">↗</span></strong><span>从报到到日常生活</span></a>
-  <a class="manual-card" href="/life/dormitory/"><span class="manual-card-number">03 / HOUSING</span><strong>住宿指南 <span aria-hidden="true">↗</span></strong><span>宿舍信息与住宿服务</span></a>
-  <a class="manual-card" href="/transport/"><span class="manual-card-number">04 / GETTING AROUND</span><strong>交通出行 <span aria-hidden="true">↗</span></strong><span>校园与周边出行信息</span></a>
-  <a class="manual-card" href="/service/library/"><span class="manual-card-number">05 / LIBRARY</span><strong>图书馆 <span aria-hidden="true">↗</span></strong><span>阅读、自习与文献资源</span></a>
-  <a class="manual-card" href="/service/it-service/"><span class="manual-card-number">06 / IT SUPPORT</span><strong>IT 与网络 <span aria-hidden="true">↗</span></strong><span>账号、网络与技术支持</span></a>
-  <a class="manual-card" href="/canteen/"><span class="manual-card-number">07 / DINING</span><strong>校园餐饮 <span aria-hidden="true">↗</span></strong><span>食堂与用餐信息</span></a>
-  <a class="manual-card" href="/contact/"><span class="manual-card-number">08 / CONTACT</span><strong>校园黄页 <span aria-hidden="true">↗</span></strong><span>部门联络与办事入口</span></a>
 </div>
 
-<a class="manual-freshman" href="/life/"><strong>初来港科广？</strong><span>从新生指南开始，慢慢认识校园。</span><span aria-hidden="true">→</span></a>
-
-## 常用网站 <span class="manual-section-en">QUICK LINKS</span>
-
 <section class="manual-redbird" aria-labelledby="redbird-links-title">
-  <div class="manual-redbird-heading"><div><span class="manual-redbird-badge">RED BIRD MPHIL</span><h3 id="redbird-links-title">红鸟硕士常用</h3></div><p>把每天常用的入口，放在一起。</p></div>
+  <div class="manual-redbird-heading"><div><span class="manual-redbird-badge">RED BIRD MPHIL</span><h3 id="redbird-links-title">红鸟硕士常用</h3></div><p>学业、学习与科研工具，一站直达。</p></div>
   <div class="manual-redbird-links">
     <a href="https://sisn.hkust-gz.edu.cn/auth-sign" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">学业事务</span><strong>SIS <span aria-hidden="true">↗</span></strong><span>研究生信息系统</span></a>
     <a href="https://elpa.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">语言评估</span><strong>ELPA <span aria-hidden="true">↗</span></strong><span>英语水平评估</span></a>
@@ -52,7 +39,28 @@ pageClass: manual-home
   </div>
 </section>
 
-### 其他校园网站
+<div class="manual-resource-grid">
+<section class="manual-resource-section">
+
+<h2>校园指南 <span class="manual-section-en">CAMPUS ESSENTIALS</span></h2>
+
+<div class="manual-card-grid">
+  <a class="manual-card" href="/study/"><strong>学习与教务 <span aria-hidden="true">↗</span></strong><span>选课、教务与学术事务</span></a>
+  <a class="manual-card" href="/life/"><strong>校园生活 <span aria-hidden="true">↗</span></strong><span>从报到到日常生活</span></a>
+  <a class="manual-card" href="/life/dormitory/"><strong>住宿指南 <span aria-hidden="true">↗</span></strong><span>宿舍信息与住宿服务</span></a>
+  <a class="manual-card" href="/transport/"><strong>交通出行 <span aria-hidden="true">↗</span></strong><span>校园与周边出行信息</span></a>
+  <a class="manual-card" href="/service/library/"><strong>图书馆 <span aria-hidden="true">↗</span></strong><span>阅读、自习与文献资源</span></a>
+  <a class="manual-card" href="/service/it-service/"><strong>IT 与网络 <span aria-hidden="true">↗</span></strong><span>账号、网络与技术支持</span></a>
+  <a class="manual-card" href="/canteen/"><strong>校园餐饮 <span aria-hidden="true">↗</span></strong><span>食堂与用餐信息</span></a>
+  <a class="manual-card" href="/contact/"><strong>校园黄页 <span aria-hidden="true">↗</span></strong><span>部门联络与办事入口</span></a>
+</div>
+
+<a class="manual-freshman" href="/life/"><strong>初来港科广？</strong><span>从新生指南开始，慢慢认识校园。</span><span aria-hidden="true">→</span></a>
+
+</section>
+<section class="manual-resource-section">
+
+<h2>校园网站 <span class="manual-section-en">QUICK LINKS</span></h2>
 
 <div class="manual-quick-links">
   <a href="https://www.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">学校官网 ↗</a>
@@ -63,6 +71,9 @@ pageClass: manual-home
   <a href="https://ug-prog-crs.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">课程目录 ↗</a>
   <a href="https://itdid.hkust-gz.edu.cn/cn/GeneralOfficeSoftware" target="_blank" rel="noopener noreferrer">软件下载 ↗</a>
   <a href="https://rbm-computing.hkust-gz.edu.cn" target="_blank" rel="noopener noreferrer">RBM Computing ↗</a>
+</div>
+
+</section>
 </div>
 
 <a class="manual-emergency" href="/emergency/"><strong>应急处理 →</strong><span>AED、药箱、就医与失窃处理信息</span></a>
