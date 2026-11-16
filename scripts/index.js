@@ -1,23 +1,4 @@
-const download = require('download');
+// 港科广手册暂无构建前需要下载的外部内容。
+// 原南科手册在此从 SUSTech-OpenSource 仓库下载计算机系创新实践项目汇总，
+// 港科广版已移除该外部依赖，构建脚本暂为空。
 
-const file2download = [
-    {
-        name: '南方科技大学计算机系创新实践项目汇总',
-        url: 'https://raw.githubusercontent.com/SUSTech-OpenSource/innovative_project_SUSTech/main/README.md',
-        path: 'docs/study/cse/',
-        fileName: 'innovative-project.md'
-    }
-]
-
-file2download.forEach(element => {
-    let url = element.url;
-    let path = `${__dirname}/../${element.path}`
-    let options = {
-        filename: element.fileName
-    }
-
-    download(url, path, options)
-        .then(() => {
-            console.log(`Download Completed -- ${element.name}`);
-        })
-});

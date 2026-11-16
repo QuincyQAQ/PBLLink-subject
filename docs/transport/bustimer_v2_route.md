@@ -1,7 +1,5 @@
----
-title: 巴士线路详情
----
+# 待补充
 
-<ClientOnly>
-  <BusRouteV2 />
-</ClientOnly>
+::: warning 待补充
+本页内容尚未整理，欢迎补充。
+:::

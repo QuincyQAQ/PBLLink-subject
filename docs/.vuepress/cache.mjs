@@ -16,30 +16,10 @@ export const pmtilesRangePlugin = {
 }
 
 // Workbox serializes these callbacks into the worker; keep them self-contained.
+// 港科广手册无实时巴士/地图 API，缓存策略只覆盖本站与通用静态资源。
 export const runtimeCaching = [
   {
-    urlPattern: ({ url }) => /^(\/api\/public)?\/(routes|stops)(\/|$)/.test(url.pathname),
-    handler: 'NetworkOnly', // The API's HTTP cache headers control reference data freshness.
-  },
-  {
-    urlPattern: ({ url }) => url.pathname.startsWith('/api/') || /^\/(vehicles|arrivals|notices|schedules)(\/|$)/.test(url.pathname),
-    handler: 'NetworkOnly',
-    options: { fetchOptions: { cache: 'no-store' } },
-  },
-  {
-    urlPattern: ({ url, request }) => url.pathname.endsWith('.pmtiles') && request.headers.has('Range'),
-    handler: 'CacheFirst',
-    options: {
-      cacheName: 'pmtiles-ranges-v1',
-      plugins: [pmtilesRangePlugin],
-      expiration: { maxEntries: 512, maxAgeSeconds: 86400, purgeOnQuotaError: true },
-    },
-  },
-  {
     urlPattern: ({ url, request }) =>
-      (url.origin === 'https://bus.sustcra.com' && /^\/(static|geojson)\//.test(url.pathname)) ||
-      (url.origin === 'https://mirrors.sustech.edu.cn' && /^\/(osm-tile|site\/pmtiles-data)\//.test(url.pathname)) ||
-      (url.origin === 'https://google-proxy.zuzuche.com' && url.pathname.startsWith('/vt/')) ||
       ['image', 'font', 'style', 'script'].includes(request.destination),
     handler: 'CacheFirst',
     options: {

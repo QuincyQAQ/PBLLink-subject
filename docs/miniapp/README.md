@@ -1,7 +1,6 @@
-# 南科手册-微信小程序
+# 微信小程序
 
-## 南科手册Times
-
-<img  :src="$withBase('./qr-code.jpg')" alt="foo"  max-width="200"/>
-
-微信小程序无法跳转到第三方链接，体验完整版请访问 [https://sustech.online](https://sustech.online)。
+::: warning 待补充
+港科广手册的微信小程序尚未开发，相关入口待补充。
+访问完整版请使用浏览器打开本站。
+:::

@@ -1,10 +1,5 @@
----
-sidebar: false
-navbar: false
----
+# 待补充
 
-[旧版巴士页面](./bustimer_v1.html)
-
-<ClientOnly>
-  <BusHomeV2 />
-</ClientOnly>
+::: warning 待补充
+本页内容尚未整理，欢迎补充。
+:::

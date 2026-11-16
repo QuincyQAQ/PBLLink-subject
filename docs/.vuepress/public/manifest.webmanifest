@@ -1,10 +1,10 @@
 {
-  "name": "南科手册",
-  "short_name": "南科手册",
+  "name": "港科广手册",
+  "short_name": "港科广手册",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#fff",
-  "theme_color": "#3eaf7c",
+  "theme_color": "#005a87",
   "icons": [
     {
       "src": "logo-assets/touch/homescreen48.png",

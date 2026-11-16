@@ -1,54 +1,8 @@
 ﻿import { defineClientConfig } from 'vuepress/client'
-import BusTable from "./components/BusTable.vue";
-import BusTable_img from "./components/BusTable_img.vue";
-import BusAnnouncement from "./components/BusAnnouncement.vue";
-import BusETAdemo from "./components/BusETAdemo.vue";
-import TabView from "./components/TabView.vue";
-import RealtimeMap from './components/RealtimeMap.vue'
-import RealtimeMapv2 from './components/RealtimeMapv2.vue'
-import CampusMap from './components/CampusMap.vue'
 import WeatherSpan from './components/weather-span.vue'
-import BusChartVue from './components/BusChartVue.vue'
-import Canteen from './components/Canteen.vue'
-import AdSenseInline from './components/adsense-inline.vue'
-import AdSenseDisplayAD from './components/adsense-displayad.vue'
-import TalksTodayNav from './components/TalksTodayNav.vue'
-import { BusHomeV2 } from './components/bus-v2/index.mjs'
-import BusRouteV2 from './components/bus-v2/BusRouteV2.vue'
-import BusStopV2 from './components/bus-v2/BusStopV2.vue'
-import BusRefreshButton from './components/bus-v2/BusRefreshButton.vue'
-import { busPageForPath, reportBusVisit } from './components/bus-v2/analytics.mjs'
-import { setWorkerUrl } from 'maplibre-gl'
-import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 
 export default defineClientConfig({
-  enhance({ app, router }) {
-    // MapLibre 6 的独立 Worker 需要由 Vite 打包并显式指定地址。
-    setWorkerUrl(maplibreWorkerUrl)
-
-    router.afterEach((to) => {
-      const page = busPageForPath(to.path)
-      if (page) reportBusVisit(page)
-    })
-    app.component("BusTable", BusTable)
-    app.component("BusTable_img", BusTable_img)
-    app.component("BusAnnouncement", BusAnnouncement)
-    app.component("BusETAdemo", BusETAdemo)
-    app.component("TabView", TabView)
-    app.component("RealtimeMap", RealtimeMap)
-    app.component("RealtimeMapv2", RealtimeMapv2)
-    app.component("CampusMap", CampusMap)
+  enhance({ app }) {
     app.component("WeatherSpan", WeatherSpan)
-    app.component("AdSenseInline", AdSenseInline)
-    app.component("AdSenseDisplayAD", AdSenseDisplayAD)
-    app.component("TalksTodayNav", TalksTodayNav)
-    app.component("BusHomeV2", BusHomeV2)
-    app.component("BusRouteV2", BusRouteV2)
-    app.component("BusStopV2", BusStopV2)
-    app.component("BusRefreshButton", BusRefreshButton)
-
-    // 含有echart的组件，注意需要用non-ssr模式
-    app.component("BusChartVue", BusChartVue)
-    app.component("Canteen", Canteen)
   },
 })

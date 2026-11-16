@@ -39,11 +39,9 @@ function override_onclick(event) {
 
         let url_obj = new URL(url);
         let whitelist = new Set();
-        whitelist.add("mirrors.sustech.edu.cn");
-        whitelist.add("bus.sustcra.com");
-        whitelist.add("sustech.online");
-        whitelist.add("daily.sustech.online");
-        whitelist.add("susteen.itbill.cn")
+        whitelist.add("hkust-gz.edu.cn");
+        whitelist.add("hkust-gz.online");
+        whitelist.add("myportal.hkust-gz.edu.cn");
         whitelist.add("");
 
         let supportFiles = new Set();
@@ -92,49 +90,4 @@ function reset_all_anchor() {
 }
 setInterval(reset_all_anchor, 1000);
 
-function isInWechatMP() {
-    return navigator.userAgent.match(/miniprogram/i) || window.__wxjs_environment === 'miniprogram';
-};
-
-function load_adsense() {
-    console.log("判断环境，加载 adsense")
-
-    if (isInWechatMP() === false) {
-        console.log("非小程序环境，加载");
-        var oScript = document.createElement("script");
-        oScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-        oScript.setAttribute("async", "");
-        oScript.setAttribute("data-ad-client", "ca-pub-9039393129169217");
-        document.head.appendChild(oScript);
-        // <script data-ad-client="ca-pub-9039393129169217" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    } else {
-        console.log("小程序环境，跳过");
-    }
-}
-setTimeout("load_adsense()", 500);
-
-// 是否启用哀悼用黑白遮罩
-ENABLE_HOME_GRAY = false;
-function changeGray() {
-    if (ENABLE_HOME_GRAY) {
-        if (window.location.pathname === '/') {
-            document.getElementsByClassName("navbar")[0].classList.add("home-gray");
-            document.getElementsByClassName("sidebar")[0].classList.add("home-gray");
-            document.getElementsByClassName("page")[0].classList.add("home-gray");
-        } else {
-            document.getElementsByClassName("page")[0].classList.remove("home-gray");
-            document.getElementsByClassName("sidebar")[0].classList.remove("home-gray");
-            document.getElementsByClassName("navbar")[0].classList.remove("home-gray");
-        }
-    }
-}
-
-domObserver = new MutationObserver(function (mutations) {
-    // DOM 有任何变化，包括js导致的跳转
-    changeGray();
-});
-domObserver.observe(document, { subtree: true, childList: true });
-
-window.addEventListener('hashchange', () => {
-    changeGray();
-}, false);
+// 港科广手册不接入 Google AdSense，也不需要哀悼黑白遮罩。

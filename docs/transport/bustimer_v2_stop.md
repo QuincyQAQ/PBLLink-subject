@@ -1,7 +1,5 @@
----
-title: 巴士站点详情
----
+# 待补充
 
-<ClientOnly>
-  <BusStopV2 />
-</ClientOnly>
+::: warning 待补充
+本页内容尚未整理，欢迎补充。
+:::
