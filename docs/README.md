@@ -2,6 +2,8 @@
 
 <SiteSearch />
 
+📮 [邮箱汇总：招生、教务、住宿、IT、枢纽与学域联系方式](/contact/emails/)
+
 <WeatherSpan/>
 
 * 为 HKUST(GZ) 同学提供快捷信息查询服务。

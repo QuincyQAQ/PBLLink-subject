@@ -148,6 +148,7 @@ export default defineUserConfig({
     theme: defaultTheme({
         navbar: [
             { text: '主页', link: '/' },
+            { text: '邮箱汇总', link: '/contact/emails/' },
             { text: '官网', link: 'https://www.hkust-gz.edu.cn/' },
             { text: '门户', link: 'https://myportal.hkust-gz.edu.cn/' },
             { text: '关于', link: '/about/' },
@@ -189,6 +190,7 @@ export default defineUserConfig({
             '/',
             '/facility/',
             '/contact/',
+            '/contact/emails/',
             '/service/',
             '/life/',
             '/study/',

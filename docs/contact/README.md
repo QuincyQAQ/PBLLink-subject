@@ -1,5 +1,7 @@
 # 📇黄页
 
+📮 [邮箱汇总：按部门与事务查找全部已收录邮箱](/contact/emails/) · [教师邮箱查询](/contact/professor-emails/)
+
 ## 学校信息
 
 - 校名：香港科技大学（广州） / The Hong Kong University of Science and Technology (Guangzhou)
