@@ -19,7 +19,6 @@ pageClass: manual-home
 <a class="manual-email-page" href="/contact/emails/">
   <span class="manual-email-icon" aria-hidden="true">✉</span>
   <span class="manual-email-copy"><strong>邮箱汇总 <small>EMAIL DIRECTORY</small></strong><span>83 个公开邮箱 · 招生、教务、住宿、IT、枢纽与学域</span></span>
-  <span class="manual-email-arrow" aria-hidden="true">↗</span>
 </a>
 
 <SiteSearch />
@@ -29,13 +28,13 @@ pageClass: manual-home
 <section class="manual-redbird" aria-labelledby="redbird-links-title">
   <div class="manual-redbird-heading"><div><span class="manual-redbird-badge">RED BIRD MPHIL</span><h3 id="redbird-links-title">红鸟硕士常用</h3></div><p>学业、学习与科研工具，一站直达。</p></div>
   <div class="manual-redbird-links">
-    <a href="https://sisn.hkust-gz.edu.cn/auth-sign" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">学业事务</span><strong>SIS <span aria-hidden="true">↗</span></strong><span>研究生信息系统</span></a>
-    <a href="https://elpa.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">语言评估</span><strong>ELPA <span aria-hidden="true">↗</span></strong><span>英语水平评估</span></a>
-    <a href="https://klms.hkust-gz.edu.cn/home" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">学习平台</span><strong>KLMS <span aria-hidden="true">↗</span></strong><span>进入学习平台</span></a>
-    <a href="https://gpt.hkust-gz.edu.cn/conversation-mode" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">AI 工具</span><strong>校内 GPT <span aria-hidden="true">↗</span></strong><span>校园 AI 对话入口</span></a>
-    <a href="https://docs.hpc.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">科研计算</span><strong>HPC <span aria-hidden="true">↗</span></strong><span>智算平台使用文档</span></a>
-    <a href="https://hkust-gz.instructure.com" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">学习平台</span><strong>Canvas <span aria-hidden="true">↗</span></strong><span>进入 Canvas 平台</span></a>
-    <a href="https://pdc.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">常用系统</span><strong>PDC <span aria-hidden="true">↗</span></strong><span>进入 PDC 平台</span></a>
+    <a href="https://sisn.hkust-gz.edu.cn/auth-sign" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">学业事务</span><strong>SIS</strong><span>研究生信息系统</span></a>
+    <a href="https://elpa.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">语言评估</span><strong>ELPA</strong><span>英语水平评估</span></a>
+    <a href="https://klms.hkust-gz.edu.cn/home" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">学习平台</span><strong>KLMS</strong><span>进入学习平台</span></a>
+    <a href="https://gpt.hkust-gz.edu.cn/conversation-mode" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">AI 工具</span><strong>校内 GPT</strong><span>校园 AI 对话入口</span></a>
+    <a href="https://docs.hpc.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">科研计算</span><strong>HPC</strong><span>智算平台使用文档</span></a>
+    <a href="https://hkust-gz.instructure.com" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">学习平台</span><strong>Canvas</strong><span>进入 Canvas 平台</span></a>
+    <a href="https://pdc.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">常用系统</span><strong>PDC</strong><span>进入 PDC 平台</span></a>
   </div>
 </section>
 
@@ -45,17 +44,16 @@ pageClass: manual-home
 <h2>校园指南 <span class="manual-section-en">CAMPUS ESSENTIALS</span></h2>
 
 <div class="manual-card-grid">
-  <a class="manual-card" href="/study/"><strong>学习与教务 <span aria-hidden="true">↗</span></strong><span>选课、教务与学术事务</span></a>
-  <a class="manual-card" href="/life/"><strong>校园生活 <span aria-hidden="true">↗</span></strong><span>从报到到日常生活</span></a>
-  <a class="manual-card" href="/life/dormitory/"><strong>住宿指南 <span aria-hidden="true">↗</span></strong><span>宿舍信息与住宿服务</span></a>
-  <a class="manual-card" href="/transport/"><strong>交通出行 <span aria-hidden="true">↗</span></strong><span>校园与周边出行信息</span></a>
-  <a class="manual-card" href="/service/library/"><strong>图书馆 <span aria-hidden="true">↗</span></strong><span>阅读、自习与文献资源</span></a>
-  <a class="manual-card" href="/service/it-service/"><strong>IT 与网络 <span aria-hidden="true">↗</span></strong><span>账号、网络与技术支持</span></a>
-  <a class="manual-card" href="/canteen/"><strong>校园餐饮 <span aria-hidden="true">↗</span></strong><span>食堂与用餐信息</span></a>
-  <a class="manual-card" href="/contact/"><strong>校园黄页 <span aria-hidden="true">↗</span></strong><span>部门联络与办事入口</span></a>
+  <a class="manual-card" href="/study/"><strong>学习与教务</strong><span>选课、教务与学术事务</span></a>
+  <a class="manual-card" href="/life/"><strong>校园生活</strong><span>从报到到日常生活</span></a>
+  <a class="manual-card" href="/life/dormitory/"><strong>住宿指南</strong><span>宿舍信息与住宿服务</span></a>
+  <a class="manual-card" href="/transport/"><strong>交通出行</strong><span>校园与周边出行信息</span></a>
+  <a class="manual-card" href="/service/library/"><strong>图书馆</strong><span>阅读、自习与文献资源</span></a>
+  <a class="manual-card" href="/service/it-service/"><strong>IT 与网络</strong><span>账号、网络与技术支持</span></a>
+  <a class="manual-card" href="/canteen/"><strong>校园餐饮</strong><span>食堂与用餐信息</span></a>
+  <a class="manual-card" href="/contact/"><strong>校园黄页</strong><span>部门联络与办事入口</span></a>
 </div>
 
-<a class="manual-freshman" href="/life/"><strong>初来港科广？</strong><span>从新生指南开始，慢慢认识校园。</span><span aria-hidden="true">→</span></a>
 
 </section>
 <section class="manual-resource-section">
@@ -63,20 +61,23 @@ pageClass: manual-home
 <h2>校园网站 <span class="manual-section-en">QUICK LINKS</span></h2>
 
 <div class="manual-quick-links">
-  <a href="https://www.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">学校官网 ↗</a>
-  <a href="https://myportal.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">校内门户 Portal ↗</a>
-  <a href="https://onestop-online.hkust-gz.edu.cn/fp/view?m=fp" target="_blank" rel="noopener noreferrer">办事大厅 ↗</a>
-  <a href="https://library.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">图书馆官网 ↗</a>
-  <a href="https://fytgs.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">研究生院 ↗</a>
-  <a href="https://ug-prog-crs.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">课程目录 ↗</a>
-  <a href="https://itdid.hkust-gz.edu.cn/cn/GeneralOfficeSoftware" target="_blank" rel="noopener noreferrer">软件下载 ↗</a>
-  <a href="https://rbm-computing.hkust-gz.edu.cn" target="_blank" rel="noopener noreferrer">RBM Computing ↗</a>
+  <a href="https://www.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">学校官网</a>
+  <a href="https://myportal.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">校内门户 Portal</a>
+  <a href="https://onestop-online.hkust-gz.edu.cn/fp/view?m=fp" target="_blank" rel="noopener noreferrer">办事大厅</a>
+  <a href="https://library.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">图书馆官网</a>
+  <a href="https://fytgs.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">研究生院</a>
+  <a href="https://ug-prog-crs.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">课程目录</a>
+  <a href="https://itdid.hkust-gz.edu.cn/cn/GeneralOfficeSoftware" target="_blank" rel="noopener noreferrer">软件下载</a>
+  <a href="https://rbm-computing.hkust-gz.edu.cn" target="_blank" rel="noopener noreferrer">RBM Computing</a>
 </div>
+
+<a class="manual-freshman" href="/life/"><strong>初来港科广？</strong><span>从新生指南开始，慢慢认识校园。</span></a>
+
+<a class="manual-emergency" href="/emergency/"><strong>应急处理</strong><span>AED、药箱、就医与失窃处理信息</span></a>
 
 </section>
 </div>
 
-<a class="manual-emergency" href="/emergency/"><strong>应急处理 →</strong><span>AED、药箱、就医与失窃处理信息</span></a>
 
 ## 关于这本手册 <span class="manual-section-en">MADE FOR CAMPUS LIFE</span>
 
