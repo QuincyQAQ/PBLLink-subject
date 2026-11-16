@@ -24,6 +24,15 @@
   --content-width: 1120px;
   .theme-default-content { max-width: var(--content-width); padding: .85rem 1.15rem; }
   .theme-default-content [vp-content] a[href]::after { display: none; }
+  // Dashboard headings use scroll offsets without adding empty layout space.
+  [vp-content] :is(h1, h2, h3, h4, h5, h6) {
+    padding-top: 0;
+    scroll-margin-top: calc(var(--navbar-height) + 1rem);
+  }
+  [vp-content] .manual-resource-section > h2:first-child {
+    margin: 0 0 .45rem;
+    padding: 0 0 .3rem;
+  }
   .manual-hero {
     position: relative;
     isolation: isolate;
@@ -80,7 +89,7 @@
   .site-search input { padding: .55rem .65rem; background: var(--vp-c-bg); font-size: .85rem; }
   .site-search .search-hint { margin-top: .35rem; font-size: .73rem; line-height: 1.5; }
   h2 { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem; padding-bottom: .3rem; margin: .85rem 0 .5rem; font-size: 1.1rem; }
-  .manual-resource-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); align-items: start; gap: .85rem; margin-top: .75rem; }
+  .manual-resource-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); align-items: start; gap: .85rem; margin-top: .5rem; }
   .manual-resource-section { min-width: 0; }
   .manual-resource-section > h2 { margin-top: 0; }
   .manual-section-en { color: var(--vp-c-text-mute); font-size: .6rem; letter-spacing: .1em; font-weight: 450; }
@@ -103,8 +112,8 @@
   .manual-card:hover, .manual-email-page:hover { border-color: var(--vp-c-accent); background: var(--manual-surface); text-decoration: none; }
   .manual-freshman { display: flex; flex-wrap: wrap; align-items: center; gap: .15rem .5rem; margin-top: .5rem; padding: .55rem .7rem; background: var(--manual-surface); border-radius: 8px; color: var(--vp-c-text); }
   .manual-freshman > span:first-of-type { flex: 1; color: var(--vp-c-text-mute); font-size: .8rem; }
-  .manual-redbird { padding: .65rem; border: 1px solid var(--vp-c-divider); border-top: 3px solid var(--manual-redbird); border-radius: 10px; background: var(--manual-redbird-bg); }
-  .manual-redbird-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .4rem 1rem; margin-bottom: .65rem; }
+  .manual-redbird { margin: 0; padding: .65rem; border: 1px solid var(--vp-c-divider); border-top: 3px solid var(--manual-redbird); border-radius: 10px; background: var(--manual-redbird-bg); }
+  .manual-redbird-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .4rem 1rem; margin-bottom: .4rem; }
   .manual-redbird-heading > div { display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem; }
   .manual-redbird-badge { color: var(--manual-redbird); font-size: .65rem; font-weight: 700; letter-spacing: .14em; }
   .manual-redbird-heading h3 { margin: 0; padding: 0; font-size: 1.1rem; }
