@@ -8,6 +8,7 @@ import { defineUserConfig } from '@vuepress/cli'
 import { viteBundler } from '@vuepress/bundler-vite'
 import ProcessExitPlugin from './components/vite-plugin-vue-process-exit'
 import { runtimeCaching } from './cache.mjs'
+import siteSearchPlugin from './search.mjs'
 
 const ogprefix = 'og: http://ogp.me/ns#'
 const title = '港科广手册'
@@ -50,6 +51,7 @@ export default defineUserConfig({
         ['script', { src: 'https://res.wx.qq.com/open/js/jweixin-1.6.0.js' }],
     ],
     plugins: [
+        siteSearchPlugin(),
         // [
         //   '@vuepress/plugin-search',
         //   {

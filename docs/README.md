@@ -1,5 +1,7 @@
 # 📚港科广手册
 
+<SiteSearch />
+
 <WeatherSpan/>
 
 * 为 HKUST(GZ) 同学提供快捷信息查询服务。
