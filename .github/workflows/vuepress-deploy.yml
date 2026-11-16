@@ -1,0 +1,74 @@
+name: Build and Deploy
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    name: Build site
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v7
+      with:
+        fetch-depth: 0
+
+    - name: Set timezone
+      run: sudo timedatectl set-timezone Asia/Shanghai
+
+    - name: Check Time
+      run: date
+
+    - uses: actions/setup-node@v7
+      name: Install Node.js
+      with:
+        node-version-file: '.nvmrc'
+
+    - uses: pnpm/action-setup@v6
+      name: Install pnpm
+      with:
+        version: 10
+
+    - name: Install Dependencies
+      run: pnpm install
+
+    - name: Check pnpm / node version
+      run: |
+        echo "pnpm version `pnpm --version`"
+        echo "node version `node -v`"
+        pnpm list
+
+    - name: Build Site
+      run: |
+        pnpm docs:clean
+        pnpm docs:build
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v7
+      with:
+        name: 'hkust-gz-manual-build'
+        path: './docs/.vuepress/dist/'
+
+  deploy-on-main:
+    name: Deploy site (main)
+    runs-on: "ubuntu-latest"
+    needs: build
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    steps:
+    - uses: actions/download-artifact@v8
+      with:
+        name: hkust-gz-manual-build
+        path: "./docs/.vuepress/dist/"
+
+    - name: Display structure of downloaded files
+      run: ls -R
+      working-directory: "./docs/.vuepress/dist/"
+
+    - name: Deploy to GitHub page
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/.vuepress/dist/
+        force_orphan: true

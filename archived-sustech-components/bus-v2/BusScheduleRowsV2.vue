@@ -1,0 +1,56 @@
+<template>
+  <div class="schedule-toolbar">
+    <div class="schedule-legend" :aria-label="busText('scheduleLegend', {}, language)">
+      <span><i class="swatch bus" />{{ busText('bus', {}, language) }}</span><span><i class="swatch shuttle" />{{ busText('shuttle', {}, language) }}</span><span><b class="time bus next">07:20</b>{{ busText('nextTrip', {}, language) }}</span><span><b class="time bus running">07:10</b>{{ busText('running', {}, language) }}</span>
+    </div>
+    <label class="schedule-filter"><input v-model="activeOnly" type="checkbox"> {{ busText('activeTripsOnly', {}, language) }}</label>
+  </div>
+  <div class="schedule-list">
+    <article v-for="group in groups" :key="group.key" class="schedule-row">
+      <div class="route-info" :style="{ borderColor: group.color || '#2878c8' }" :class="{ collapsible: portrait }" :role="portrait ? 'button' : undefined" :tabindex="portrait ? 0 : undefined" @click="toggleRoute(group.key)" @keydown.enter.prevent="toggleRoute(group.key)" @keydown.space.prevent="toggleRoute(group.key)">
+        <strong>{{ group.routeName }}</strong><span>{{ group.directionName }}</span><small>{{ serviceLabel(group) }}</small>
+      </div>
+      <div class="times">
+        <span v-for="(item, index) in displayedTimes(group)" :key="index" :class="['time', item.status, item.vehicleType?.toLowerCase(), { changed: item.change === 'CANCELLED' || item.change === 'EXTRA' }]" :title="item.note || undefined"><del v-if="item.change === 'CANCELLED'">{{ item.time }}</del><template v-else>{{ item.time }}</template><small v-if="changeLabel(item)"> {{ changeLabel(item) }}</small></span>
+        <span v-if="!displayedTimes(group).length" class="muted">{{ busText('noActiveTrips', {}, language) }}</span>
+        <button v-if="isCollapsed(group.key) && visibleTimes(group.times).length > 1" class="ellipsis" type="button" :aria-label="busText('expandSchedule', {}, language)" @click="toggleRoute(group.key)">······</button>
+      </div>
+    </article>
+  </div>
+</template>
+
+<script setup>
+import { busText } from './i18n.mjs'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { serviceTypeLabel } from './core.mjs'
+
+const props = defineProps({ groups: { type: Array, default: () => [] }, language: { type: String, default: 'zh' } })
+const activeOnly = ref(true)
+const collapsedRoutes = ref(new Set())
+const portrait = ref(false)
+let orientationQuery
+const changeLabel = (item) => ({ EXTRA: busText('extraTrip', {}, props.language), CANCELLED: busText('cancelledTrip', {}, props.language) })[item.change] || ''
+const serviceLabel = (group) => [group.serviceType && group.serviceType !== 'NORMAL' ? serviceTypeLabel(group.serviceType, props.language) : '', group.vehicleTypes?.map((type) => type === 'SHUTTLE' ? busText('shuttle', {}, props.language) : type === 'BUS' ? busText('bus', {}, props.language) : type).join(' / ')].filter(Boolean).join(' · ') || busText('normalService', {}, props.language)
+const visibleTimes = (times) => activeOnly.value ? times.filter((item) => item.status !== 'past') : times
+const isCollapsed = (groupKey) => portrait.value && collapsedRoutes.value.has(groupKey)
+const displayedTimes = (group) => isCollapsed(group.key) ? visibleTimes(group.times).slice(0, 1) : visibleTimes(group.times)
+function toggleRoute(groupKey) { if (!portrait.value) return; const next = new Set(collapsedRoutes.value); next.has(groupKey) ? next.delete(groupKey) : next.add(groupKey); collapsedRoutes.value = next }
+function updatePortrait() { portrait.value = orientationQuery?.matches ?? false }
+onMounted(() => { orientationQuery = window.matchMedia('(orientation: portrait)'); updatePortrait(); orientationQuery.addEventListener?.('change', updatePortrait); window.addEventListener('resize', updatePortrait) })
+onBeforeUnmount(() => { orientationQuery?.removeEventListener?.('change', updatePortrait); window.removeEventListener('resize', updatePortrait) })
+</script>
+
+<style scoped lang="scss">
+.schedule-toolbar { display: flex; flex-wrap: wrap; gap: .55rem 1rem; align-items: center; justify-content: space-between; margin-bottom: .7rem; font-size: .84rem; }.schedule-legend { display: flex; flex-wrap: wrap; gap: .55rem 1rem; align-items: center; }.schedule-legend > span { display: inline-flex; align-items: center; gap: .3rem; }.schedule-filter { cursor: pointer; white-space: nowrap; }.swatch { width: .72rem; height: .72rem; border-radius: 50%; }.swatch.bus { background: var(--bus-v2-bus-fill); border: 1px solid var(--bus-v2-bus-text); }.swatch.shuttle { background: var(--bus-v2-shuttle-fill); border: 1px solid var(--bus-v2-shuttle-text); }.schedule-list { overflow: hidden; border: 1px solid #d9e2ec; border-radius: .6rem; container-type: inline-size; }.schedule-row { display: flex; flex-wrap: wrap; border-bottom: 1px solid #e7edf4; }.schedule-row:last-child { border: 0; }.route-info { box-sizing: border-box; display: flex; min-width: 8rem; flex: 1 1 9rem; flex-direction: column; justify-content: center; gap: .2rem; padding: .75rem; border-left: .4rem solid; background: var(--c-bg-soft, #f8fafc); }.route-info small, .muted { color: #667085; }.times { box-sizing: border-box; display: flex; min-width: 8rem; flex: 999 1 8rem; flex-wrap: wrap; align-content: flex-start; gap: .45rem; padding: .75rem; }.time { --vehicle-color: var(--bus-v2-bus-text); --vehicle-soft: var(--bus-v2-bus-soft); --vehicle-fill: var(--bus-v2-bus-fill); --vehicle-ink: #754600; padding: .13rem .38rem; border-radius: .25rem; color: var(--vehicle-color); background: var(--vehicle-soft); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }.time.shuttle { --vehicle-color: var(--bus-v2-shuttle-text); --vehicle-soft: var(--bus-v2-shuttle-soft); --vehicle-fill: var(--bus-v2-shuttle-fill); --vehicle-ink: #193e29; }.time.running { border: 1px solid var(--vehicle-color); background: var(--vehicle-soft); }.time.next { background: var(--vehicle-fill); color: var(--vehicle-ink); font-weight: 700; }.time.past { opacity: .35; }
+@container (max-width: 24rem) { .schedule-row { flex-direction: column; }.route-info { width: 100%; min-width: 0; flex: none; flex-direction: row; flex-wrap: wrap; align-items: baseline; justify-content: flex-start; border-left: 0; border-top: .35rem solid; padding: .5rem; }.times { width: 100%; min-width: 0; flex: none; } }
+.schedule-list { --bus-v2-bg: var(--bus-v2-schedule-bg); border-color: var(--bus-v2-border); background: var(--bus-v2-bg); color: var(--bus-v2-text); }
+.schedule-row { border-color: var(--bus-v2-border); }
+.route-info { background: var(--bus-v2-bg-alt); }
+.route-info.collapsible { cursor: pointer; }
+.ellipsis { border: 0; padding: .13rem .38rem; background: transparent; color: var(--bus-v2-muted); font: inherit; letter-spacing: .15em; cursor: pointer; }
+.route-info small, .muted { color: var(--bus-v2-muted); }
+.time.changed { border: 1px dashed currentColor; }
+.time.cancelled { background: transparent; color: var(--bus-v2-muted); }
+.time small { font-family: inherit; font-size: .8em; }
+.time del { opacity: .7; }
+</style>
