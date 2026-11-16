@@ -23,7 +23,7 @@
 .manual-home {
   --content-width: 1120px;
   .theme-default-content { max-width: var(--content-width); padding: .85rem 1.15rem; }
-  .theme-default-content[vp-content] a[href]::after { display: none; }
+  .theme-default-content [vp-content] a[href]::after { display: none; }
   .manual-hero {
     position: relative;
     isolation: isolate;
