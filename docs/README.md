@@ -1,158 +1,78 @@
-# 📚港科广手册
+---
+title: 港科广手册
+pageClass: manual-home
+---
+
+<div class="manual-hero">
+  <img src="/images/campus-red-bird.webp" alt="港科广红鸟日晷与校园建筑" width="1600" height="1067" fetchpriority="high" />
+  <div class="manual-hero-copy">
+    <p class="manual-eyebrow">HKUST(GZ) · CAMPUS GUIDE</p>
+    <h1>港科广手册</h1>
+    <p class="manual-hero-subtitle">从入学第一天，到校园每一天。</p>
+    <p class="manual-hero-description">学习、生活与校园服务，一本手册随手查。</p>
+    <span class="manual-hero-location">广州 · 南沙</span>
+  </div>
+</div>
 
 <a class="manual-email-page" href="/contact/emails/">
-  <strong>📮 邮箱汇总 <span aria-hidden="true">→</span></strong>
-  <span>83 个公开联系邮箱 · 招生、教务、住宿、IT、枢纽与学域</span>
+  <span class="manual-email-icon" aria-hidden="true">✉</span>
+  <span class="manual-email-copy"><strong>邮箱汇总 <small>EMAIL DIRECTORY</small></strong><span>83 个公开邮箱 · 招生、教务、住宿、IT、枢纽与学域</span></span>
+  <span class="manual-email-arrow" aria-hidden="true">↗</span>
 </a>
 
 <SiteSearch />
 
-<style>
-.manual-email-page {
-  display: flex;
-  flex-direction: column;
-  gap: .45rem;
-  margin: 1rem 0;
-  padding: 1rem 1.2rem;
-  border: 1px solid var(--vp-c-accent, #005a87);
-  border-radius: 10px;
-  color: var(--vp-c-text, inherit);
-  text-decoration: none !important;
-}
-.manual-email-page strong {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.2rem;
-  color: var(--vp-c-accent, #005a87);
-}
-.manual-email-page > span { font-size: .9rem; }
-.manual-email-page:hover, .manual-email-page:focus-visible {
-  background: var(--vp-c-bg-soft, #f0f6fa);
-}
-</style>
+## 校园指南 <span class="manual-section-en">CAMPUS ESSENTIALS</span>
 
-<WeatherSpan/>
+<div class="manual-card-grid">
+  <a class="manual-card" href="/study/"><span class="manual-card-number">01 / STUDY</span><strong>学习与教务 <span aria-hidden="true">↗</span></strong><span>选课、教务与学术事务</span></a>
+  <a class="manual-card" href="/life/"><span class="manual-card-number">02 / LIFE</span><strong>校园生活 <span aria-hidden="true">↗</span></strong><span>从报到到日常生活</span></a>
+  <a class="manual-card" href="/life/dormitory/"><span class="manual-card-number">03 / HOUSING</span><strong>住宿指南 <span aria-hidden="true">↗</span></strong><span>宿舍信息与住宿服务</span></a>
+  <a class="manual-card" href="/transport/"><span class="manual-card-number">04 / GETTING AROUND</span><strong>交通出行 <span aria-hidden="true">↗</span></strong><span>校园与周边出行信息</span></a>
+  <a class="manual-card" href="/service/library/"><span class="manual-card-number">05 / LIBRARY</span><strong>图书馆 <span aria-hidden="true">↗</span></strong><span>阅读、自习与文献资源</span></a>
+  <a class="manual-card" href="/service/it-service/"><span class="manual-card-number">06 / IT SUPPORT</span><strong>IT 与网络 <span aria-hidden="true">↗</span></strong><span>账号、网络与技术支持</span></a>
+  <a class="manual-card" href="/canteen/"><span class="manual-card-number">07 / DINING</span><strong>校园餐饮 <span aria-hidden="true">↗</span></strong><span>食堂与用餐信息</span></a>
+  <a class="manual-card" href="/contact/"><span class="manual-card-number">08 / CONTACT</span><strong>校园黄页 <span aria-hidden="true">↗</span></strong><span>部门联络与办事入口</span></a>
+</div>
 
-* 为 HKUST(GZ) 同学提供快捷信息查询服务。
-* 移动端须点击左上角，打开目录。
-* [内容有问题？功能提建议？手册招维护！](/about)
+<a class="manual-freshman" href="/life/"><strong>初来港科广？</strong><span>从新生指南开始，慢慢认识校园。</span><span aria-hidden="true">→</span></a>
 
-<style type="text/css">
-.tg {
-    border: 1px solid transparent;
-    font-weight: normal
-}
+## 常用网站 <span class="manual-section-en">QUICK LINKS</span>
 
-.tg tr {
-    background-color: transparent;
-}
+<div class="manual-quick-links">
+  <a href="https://www.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">学校官网 ↗</a>
+  <a href="https://myportal.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">校内门户 Portal ↗</a>
+  <a href="https://onestop-online.hkust-gz.edu.cn/fp/view?m=fp" target="_blank" rel="noopener noreferrer">办事大厅 ↗</a>
+  <a href="https://library.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">图书馆官网 ↗</a>
+  <a href="https://fytgs.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">研究生院 ↗</a>
+  <a href="https://sisn.hkust-gz.edu.cn/auth-sign" target="_blank" rel="noopener noreferrer">SIS 研究生系统 ↗</a>
+  <a href="https://elpa.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer">ELPA 英语评估 ↗</a>
+  <a href="https://ug-prog-crs.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">课程目录 ↗</a>
+  <a href="https://klms.hkust-gz.edu.cn/home" target="_blank" rel="noopener noreferrer">KLMS ↗</a>
+  <a href="https://gpt.hkust-gz.edu.cn/conversation-mode" target="_blank" rel="noopener noreferrer">校内 GPT ↗</a>
+  <a href="https://itdid.hkust-gz.edu.cn/cn/GeneralOfficeSoftware" target="_blank" rel="noopener noreferrer">软件下载 ↗</a>
+  <a href="https://docs.hpc.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">HPC 智算平台 ↗</a>
+  <a href="https://hkust-gz.instructure.com" target="_blank" rel="noopener noreferrer">Canvas ↗</a>
+  <a href="https://pdc.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer">PDC ↗</a>
+  <a href="https://rbm-computing.hkust-gz.edu.cn" target="_blank" rel="noopener noreferrer">RBM Computing ↗</a>
+</div>
 
-.tg .tg-0lax {
-    border: inherit;
-    font-weight: inherit;
-    text-align: left;
-    vertical-align: top
-}
+<a class="manual-emergency" href="/emergency/"><strong>应急处理 →</strong><span>AED、药箱、就医与失窃处理信息</span></a>
 
-.tg-0lax h3 {
-    padding-top: 50px;
-}
-</style>
+## 关于这本手册 <span class="manual-section-en">MADE FOR CAMPUS LIFE</span>
 
-<svg style="display: none">
-  <symbol id="link-icon" viewBox="0 0 100 100">
-  <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon>
-  </symbol>
-</svg>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-0lax">
-    <h3>🔥 常用入口</h3>
-    <ul>
-    <li><a href="https://www.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">🌐 官网
-    <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
-    <li><a href="https://myportal.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">🏠 校内门户 Portal
-    <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
-    <li><a href="https://onestop-online.hkust-gz.edu.cn/fp/view?m=fp" target="_blank" rel="noopener noreferrer">🪪 办事大厅
-    <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
-    <li><a href="https://library.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">📖 图书馆
-    <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
-    <li><a href="https://fytgs.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">🎓 研究生教务
-    <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
-    <li><a href="https://sisn.hkust-gz.edu.cn/auth-sign" target="_blank" rel="noopener noreferrer">🏫 SIS 研究生信息系统
-    <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
-    <li><a href="https://elpa.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer">🇬🇧 ELPA 英语水平评估
-    <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
-    </ul>
-    </th>
-    <th class="tg-0lax">
-    <ul>
-    <li><a href="https://ug-prog-crs.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">📝 课程目录
-    <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a>, <a href="https://klms.hkust-gz.edu.cn/home" target="_blank" rel="noopener noreferrer">📚 KLMS<svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
-    <li><a href="https://gpt.hkust-gz.edu.cn/conversation-mode" target="_blank" rel="noopener noreferrer">🤖 校内 GPT
-    <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
-    <li><a href="https://itdid.hkust-gz.edu.cn/cn/GeneralOfficeSoftware" target="_blank" rel="noopener noreferrer">💿 软件下载
-    <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
-    <li><a href="https://docs.hpc.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">🖥️ HPC 智算平台
-    <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
-    <li><a href="https://hkust-gz.instructure.com" target="_blank" rel="noopener noreferrer">📚 Canvas
-    <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a>, <a href="https://pdc.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer">📋 PDC<svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
-    <li><a href="https://rbm-computing.hkust-gz.edu.cn" target="_blank" rel="noopener noreferrer">🖥️ RBM Computing
-    <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
-    <li><a href="/life/">🏠 校园生活</a></li>
-    </ul>
-    </th>
-  </tr>
-</thead>
-</table>
+这里汇集香港科技大学（广州）同学常用的信息与服务入口。[发现内容有误或想一起维护？](/about/)
 
-
-<div class="emergency"><p><a href="./emergency">紧急情况？AED，药箱，就医，失窃，前往「应急处理」<svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></p></div>
-
-<style type="text/css">
-@media (max-width: 419px) {
-    .theme-default-content {
-      padding: 1.5rem;
-  }
-
-  h1 {
-    margin-top: 0;
-  }
-}
-
-div.emergency {
-  border-style: solid;
-  border-width: 2px;
-  border-color: #fe0000;
-  text-align: center;
-  vertical-align: center
-}
-div.emergency p a {
-  color: #fe0000;
-  font-weight: bold;
-  word-break: normal;
-}
-</style>
-
-## 学校信息
-
-- **校名**：香港科技大学（广州） / The Hong Kong University of Science and Technology (Guangzhou)
-- **地址**：广东省广州市南沙区笃学路 1 号
+- **学校地址**：广东省广州市南沙区笃学路 1 号
 - **邮编**：511453
 - **电话**：020-88339116
 
-## 如果你是新生... <Badge text="For Freshman" type="tip"/>
+<div class="manual-home-note">
 
-如果你是港科广的新同学，可以从[校园生活](./life/)开始了解住宿、餐饮、设施与常用服务；学术相关（选课、教务、论文流程）见[学习](./study/)。
+For international students: you can [translate this guide with Chrome](https://support.google.com/chrome/answer/173424).
 
-## 版权信息
+手册内容除特别声明外按 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 共享。
 
-未做特别声明的内容，按 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 协议共享（署名-相同方式共享）。
+封面摄影：[Tim Wu / Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Red_Bird_Sundial,_HKUST(GZ)_20220827.jpg)，[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)。图片已缩放、转换格式，页面展示有裁切。
 
-## For International Students
-
-Please use the [Google translation tool in Chrome](https://support.google.com/chrome/answer/173424) to translate the manual.
-
----
-
+</div>
