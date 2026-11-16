@@ -187,10 +187,15 @@ export default defineUserConfig({
         sidebarDepth: 2,
         shouldPrefetch: false,
         sidebar: [
-            '/',
+            {
+                text: '📚港科广手册',
+                link: '/',
+                children: [
+                    { text: '📮邮箱汇总', link: '/contact/emails/' },
+                ],
+            },
             '/facility/',
             '/contact/',
-            '/contact/emails/',
             '/service/',
             '/life/',
             '/study/',

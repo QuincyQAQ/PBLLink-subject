@@ -1,8 +1,35 @@
 # 📚港科广手册
 
+<a class="manual-email-page" href="/contact/emails/">
+  <strong>📮 邮箱汇总 <span aria-hidden="true">→</span></strong>
+  <span>83 个公开联系邮箱 · 招生、教务、住宿、IT、枢纽与学域</span>
+</a>
+
 <SiteSearch />
 
-📮 [邮箱汇总：招生、教务、住宿、IT、枢纽与学域联系方式](/contact/emails/)
+<style>
+.manual-email-page {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+  margin: 1rem 0;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--vp-c-accent, #005a87);
+  border-radius: 10px;
+  color: var(--vp-c-text, inherit);
+  text-decoration: none !important;
+}
+.manual-email-page strong {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  color: var(--vp-c-accent, #005a87);
+}
+.manual-email-page > span { font-size: .9rem; }
+.manual-email-page:hover, .manual-email-page:focus-visible {
+  background: var(--vp-c-bg-soft, #f0f6fa);
+}
+</style>
 
 <WeatherSpan/>
 
