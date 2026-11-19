@@ -19,6 +19,7 @@
 - 账号是校内成员的唯一身份标识，可登录各类校内应用系统。
 - 学生账号格式：`username@connect.hkust-gz.edu.cn`
 - 激活账号或修改密码：ITD 网站（校园访问服务）。
+- [Identity & Access Management System](https://itdid.hkust-gz.edu.cn/cn/detail-983) — 校园账号登录、激活与密码相关服务入口。
 
 ## myPortal 统一门户
 
