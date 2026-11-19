@@ -59,7 +59,7 @@
     <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
     <li><a href="https://itdid.hkust-gz.edu.cn/cn/GeneralOfficeSoftware" target="_blank" rel="noopener noreferrer">💿 软件下载
     <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
-    <li><a href="https://docs.hpc.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer">🖥️ HPC 智算平台
+    <li><a href="https://hpc2login.hpc.hkust-gz.edu.cn" target="_blank" rel="noopener noreferrer">🖥️ HPC 智算平台
     <svg aria-hidden="true" x="0px" y="0px" width="15" height="15" class="icon outbound"><use href="#link-icon" /></svg></a></li>
     <li><a href="/life/">🏠 校园生活</a></li>
     </ul>

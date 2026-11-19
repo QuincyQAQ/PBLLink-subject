@@ -32,7 +32,8 @@ pageClass: manual-home
     <a class="no-external-link-icon" href="https://elpa.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">语言评估</span><strong>ELPA</strong><span>英语水平评估</span></a>
     <a class="no-external-link-icon" href="https://klms.hkust-gz.edu.cn/home" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">学习平台</span><strong>KLMS</strong><span>进入学习平台</span></a>
     <a class="no-external-link-icon" href="https://gpt.hkust-gz.edu.cn/conversation-mode" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">AI 工具</span><strong>校内 GPT</strong><span>校园 AI 对话入口</span></a>
-    <a class="no-external-link-icon" href="https://docs.hpc.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">科研计算</span><strong>HPC</strong><span>智算平台使用文档</span></a>
+    <a class="no-external-link-icon" href="https://aigc-api.hkust-gz.edu.cn" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">AI 工具</span><strong>AIGC API</strong><span>校内生成式 AI 接口</span></a>
+    <a class="no-external-link-icon" href="https://hpc2login.hpc.hkust-gz.edu.cn" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">科研计算</span><strong>HPC</strong><span>智算平台登录</span></a>
     <a class="no-external-link-icon" href="https://hkust-gz.instructure.com" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">学习平台</span><strong>Canvas</strong><span>进入 Canvas 平台</span></a>
     <a class="no-external-link-icon" href="https://pdc.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">常用系统</span><strong>PDC</strong><span>进入 PDC 平台</span></a>
   </div>
