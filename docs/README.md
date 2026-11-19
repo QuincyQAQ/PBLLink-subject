@@ -36,6 +36,7 @@ pageClass: manual-home
     <a class="no-external-link-icon" href="https://hpc2login.hpc.hkust-gz.edu.cn" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">科研计算</span><strong>HPC</strong><span>智算平台登录</span></a>
     <a class="no-external-link-icon" href="https://hkust-gz.instructure.com" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">学习平台</span><strong>Canvas</strong><span>进入 Canvas 平台</span></a>
     <a class="no-external-link-icon" href="https://pdc.hkust-gz.edu.cn/index" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">常用系统</span><strong>PDC</strong><span>进入 PDC 平台</span></a>
+    <a class="no-external-link-icon" href="https://rbm-computing.hkust-gz.edu.cn/my-applications" target="_blank" rel="noopener noreferrer"><span class="manual-redbird-category">学业事务</span><strong>IIC申请</strong><span>红鸟计算平台 · 我的申请</span></a>
   </div>
 </section>
 
